@@ -1,0 +1,239 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="theme-color" content="#061126">
+<title>Rudra's Study Hub | Magnetic Effects of Electric Current</title>
+<style>
+:root{--bg:#050d1d;--panel:#0a1c39;--panel2:#0d2549;--line:#1b4778;--text:#eaf4ff;--muted:#a8c4e7;--blue:#1688f8;--cyan:#59d0ff;--good:#48dfa4;--bad:#ff7b91}
+*{box-sizing:border-box}html{scroll-behavior:smooth;scroll-padding-top:86px}body{margin:0;background:radial-gradient(ellipse at 70% 0%,#102d59 0%,var(--bg) 52%);color:var(--text);font:16px/1.6 system-ui,-apple-system,Segoe UI,Roboto,Arial,sans-serif}a{color:var(--cyan);text-decoration:none}button,input{font:inherit}button{cursor:pointer}.topbar{position:sticky;top:0;z-index:10;display:flex;align-items:center;justify-content:space-between;gap:16px;padding:14px clamp(16px,4vw,52px);background:#061126eF;border-bottom:1px solid #18345c;backdrop-filter:blur(14px)}.brand{font-weight:850;font-size:1.2rem;white-space:nowrap}.brand span{color:var(--cyan)}nav{display:flex;gap:16px;flex-wrap:wrap}nav a{color:#d1e7ff;font-size:.92rem}nav a:hover{color:var(--cyan)}.wrap{width:min(1180px,92%);margin:auto}.hero{display:grid;grid-template-columns:1.05fr .95fr;align-items:center;gap:24px;padding:clamp(24px,5vw,58px) 0 28px}.eyebrow{display:inline-block;padding:5px 11px;border-radius:99px;background:#143e79;color:#bde5ff;font-size:.8rem;font-weight:750;letter-spacing:.04em}.hero h1{font-size:clamp(2.3rem,5vw,4.5rem);line-height:1.04;letter-spacing:-.04em;margin:16px 0}.gradient{background:linear-gradient(90deg,#53caff,#7d9dff);color:transparent;background-clip:text}.hero p{color:var(--muted);max-width:600px}.actions{display:flex;gap:10px;flex-wrap:wrap;margin-top:22px}.btn{border:1px solid #2d6fb4;background:linear-gradient(135deg,#1688f8,#2563eb);color:white;padding:11px 17px;border-radius:11px;font-weight:750;box-shadow:0 7px 24px #087bf32b}.btn.secondary{background:#0b1c36;box-shadow:none;color:#cde8ff}.hero-visual{min-height:320px;display:grid;place-items:center;position:relative;overflow:hidden;border:1px solid var(--line);border-radius:24px;background:radial-gradient(ellipse at center,#10366b 0%,#07172f 70%);perspective:800px}.hero-visual canvas{width:100%;height:100%;position:absolute;inset:0}.visual-label{position:absolute;bottom:14px;left:16px;color:#b8d9ff;font-size:.85rem;background:#061126c9;border:1px solid #254a78;border-radius:9px;padding:6px 10px}.section-head{display:flex;justify-content:space-between;align-items:end;gap:14px;margin:32px 0 14px}.section-head h2{margin:0;font-size:clamp(1.45rem,3vw,2rem)}.section-head p{margin:0;color:var(--muted);font-size:.9rem}.grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:15px}.card{border:1px solid var(--line);background:linear-gradient(155deg,#0b2042ed,#08172f);border-radius:17px;padding:20px;min-width:0;box-shadow:0 14px 35px #0002}.card h3{margin:0 0 10px;font-size:1.12rem}.card p,.muted{color:var(--muted)}.card ul,.card ol{padding-left:22px}.card li{margin:7px 0}.icon{font-size:1.35rem;margin-right:7px}.wide{grid-column:span 2}.formula{font-family:Georgia,serif;font-size:1.3rem;color:#c8e8ff}.concept-list{list-style:none;padding:0!important}.concept-list li{display:flex;gap:10px;align-items:flex-start}.num{flex:0 0 25px;height:25px;display:grid;place-items:center;background:#126ed0;border-radius:50%;font-size:.8rem;font-weight:800}.sim-grid{display:grid;grid-template-columns:1fr 1fr;gap:16px}.sim{background:#06152d;border:1px solid #1c4678;border-radius:14px;overflow:hidden}.sim-head{display:flex;justify-content:space-between;gap:8px;align-items:center;padding:13px 15px;border-bottom:1px solid #1a3c65}.sim-head h3{font-size:1rem;margin:0}.sim canvas{display:block;width:100%;height:280px}.controls{display:flex;gap:9px;align-items:center;flex-wrap:wrap;padding:12px 15px;color:var(--muted);font-size:.9rem}.controls label{display:flex;align-items:center;gap:7px}.controls input[type=range]{width:115px;accent-color:var(--cyan)}.tiny-btn{border:1px solid #32669b;color:#d8efff;background:#0d2a50;border-radius:8px;padding:6px 10px}.note-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:14px}.note-grid .card{padding:18px}.pill{display:inline-block;padding:3px 9px;background:#103767;border-radius:99px;color:#b7e2ff;font-size:.78rem}.diagram-box{display:grid;place-items:center;min-height:180px;border-radius:12px;background:#06152d;border:1px solid #193e6c;padding:8px}.diagram-box svg{width:100%;max-height:190px}.quiz-question{font-size:1.05rem;font-weight:750}.answers{display:grid;gap:9px;margin:15px 0}.answer{background:#0a1a33;color:var(--text);border:1px solid #24466f;border-radius:10px;padding:11px 13px;text-align:left}.answer:hover{border-color:var(--cyan)}.answer.correct{border-color:var(--good);background:#0b382f}.answer.wrong{border-color:var(--bad);background:#3b1927}.feedback{min-height:25px;color:var(--muted)}.progress{height:8px;background:#162b48;border-radius:99px;overflow:hidden}.progress span{display:block;height:100%;width:0;background:linear-gradient(90deg,#1688f8,#5dd8ff);transition:width .3s}.checklist{display:grid;gap:10px}.checklist label{display:flex;gap:10px;align-items:start;color:#cce4ff}.checklist input{accent-color:#1688f8;margin-top:5px}.quote{background:linear-gradient(120deg,#0a3267,#0a1b38);border:1px solid #1d4e85;border-radius:13px;padding:15px;color:#c8e6ff;margin-top:14px}.footer{border-top:1px solid #18345c;margin-top:45px;padding:25px 0;color:#8facd0;text-align:center}.small{font-size:.83rem;color:var(--muted)}.status{color:var(--cyan);font-size:.8rem}.hide{display:none!important}
+@media(max-width:850px){.hero{grid-template-columns:1fr}.hero-visual{min-height:280px}.grid{grid-template-columns:repeat(2,minmax(0,1fr))}.wide{grid-column:span 2}.sim-grid{grid-template-columns:1fr}}
+@media(max-width:560px){.topbar{align-items:flex-start;flex-direction:column}.topbar nav{gap:12px}.grid,.note-grid{grid-template-columns:1fr}.wide{grid-column:auto}.section-head{align-items:start;flex-direction:column}.hero{padding-top:28px}.hero-visual{min-height:250px}.card{padding:17px}}
+@media(prefers-reduced-motion:reduce){*,*::before,*::after{scroll-behavior:auto!important;animation:none!important;transition:none!important}}
+</style>
+</head>
+<body>
+<header class="topbar">
+  <div class="brand">⚛ Study<span>Hub</span> <span style="color:#9ebde2;font-weight:500;font-size:.82rem"> / Rudra</span></div>
+  <nav aria-label="Main navigation">
+    <a href="#home">Home</a><a href="#notes">Notes</a><a href="#simulations">3D / 2D Lab</a><a href="#questions">Questions</a><a href="#quiz">Quiz</a>
+  </nav>
+</header>
+<main class="wrap">
+<section class="hero" id="home">
+  <div>
+    <span class="eyebrow">CLASS 10 • SCIENCE • CBSE</span>
+    <h1>Magnetic Effect of <span class="gradient">Electric Current</span></h1>
+    <p>Learn the concepts, explore animated magnetic fields, practise board-style questions, and check your understanding—all in one study space.</p>
+    <div class="actions"><a class="btn" href="#notes">📘 Start learning</a><a class="btn secondary" href="#simulations">▶ Explore the lab</a></div>
+    <p class="small">Built for Rudra • Dark-blue study edition • No profile photo needed</p>
+  </div>
+  <div class="hero-visual"><canvas id="heroCanvas" aria-label="Animated 3D-style magnetic field around a current-carrying wire"></canvas><div class="visual-label">Animated magnetic field around a wire</div></div>
+</section>
+
+<div class="section-head"><h2>Chapter dashboard</h2><p>Follow the concepts in order</p></div>
+<div class="grid">
+  <section class="card">
+    <h3>💡 Key concepts</h3>
+    <ul class="concept-list">
+      <li><span class="num">1</span><span>Magnetic field and field lines</span></li>
+      <li><span class="num">2</span><span>Field around a straight conductor</span></li>
+      <li><span class="num">3</span><span>Field due to a circular loop</span></li>
+      <li><span class="num">4</span><span>Magnetic field of a solenoid</span></li>
+      <li><span class="num">5</span><span>Right-hand thumb rule</span></li>
+      <li><span class="num">6</span><span>Force on a current-carrying conductor</span></li>
+      <li><span class="num">7</span><span>Electric motor and electromagnetic induction</span></li>
+    </ul>
+  </section>
+  <section class="card">
+    <h3>🧠 Quick revision</h3>
+    <p><b>Magnetic field:</b> the region around a magnet or current-carrying conductor where magnetic force can be detected.</p>
+    <p><b>Field-line rules:</b> outside a magnet, lines go from north to south; field lines never cross; closer lines mean a stronger field.</p>
+    <p><b>Right-hand thumb rule:</b> point your right thumb in the direction of conventional current; curled fingers show the magnetic-field direction.</p>
+  </section>
+  <section class="card">
+    <h3>🎯 Study sprint</h3>
+    <p>Try this 45-minute session:</p>
+    <ol><li>Read notes — 10 min</li><li>Explore both simulations — 10 min</li><li>Draw two diagrams — 10 min</li><li>Answer questions — 10 min</li><li>Check quiz mistakes — 5 min</li></ol>
+    <a class="btn secondary" href="#checklist">Open checklist ↓</a>
+  </section>
+</div>
+
+<div class="section-head" id="simulations"><h2>Interactive physics lab</h2><p>Drag the controls and observe what changes</p></div>
+<div class="sim-grid">
+  <section class="sim">
+    <div class="sim-head"><h3>🧲 3D-style field around a straight wire</h3><span class="status">LIVE</span></div>
+    <canvas id="wireCanvas" aria-label="3D-style animation of circular magnetic field lines around a straight current-carrying wire"></canvas>
+    <div class="controls"><label>Current <input id="current" type="range" min="1" max="5" value="3"><b id="currentValue">3 A</b></label><button class="tiny-btn" id="reverse">Reverse current ↻</button></div>
+    <p class="small" style="padding:0 15px 13px;margin:0">Observe: stronger current is represented by brighter field lines. Reversing current reverses the indicated field direction. This is a conceptual visualization, not a measured field-strength scale.</p>
+  </section>
+  <section class="sim">
+    <div class="sim-head"><h3>〰️ 2D solenoid field</h3><span class="status">LIVE</span></div>
+    <canvas id="solenoidCanvas" aria-label="Animated 2D solenoid with magnetic field lines"></canvas>
+    <div class="controls"><label>Current <input id="solCurrent" type="range" min="1" max="5" value="3"><b id="solCurrentValue">3 A</b></label><button class="tiny-btn" id="pauseSol">Pause animation</button></div>
+    <p class="small" style="padding:0 15px 13px;margin:0">A solenoid is a long coil of insulated wire. Its field pattern resembles that of a bar magnet; the field inside is nearly uniform in an ideal long solenoid.</p>
+  </section>
+</div>
+
+<div class="section-head" id="notes"><h2>Chapter notes</h2><p>Class 10 level summaries</p></div>
+<div class="note-grid">
+  <section class="card">
+    <span class="pill">Concept 01</span><h3>Magnetic field and field lines</h3>
+    <p>Magnetic field lines represent the direction and relative strength of a magnetic field.</p>
+    <ul><li>The tangent at a point gives the field direction.</li><li>Lines form continuous closed curves.</li><li>They never intersect one another.</li><li>They are closer together where the field is stronger.</li></ul>
+  </section>
+  <section class="card">
+    <span class="pill">Concept 02</span><h3>Straight current-carrying conductor</h3>
+    <p>The magnetic field lines are concentric circles around a straight conductor. Their direction depends on current direction.</p>
+    <p><b>Right-hand thumb rule:</b> thumb = conventional current; curled fingers = magnetic field.</p>
+    <div class="diagram-box"><svg viewBox="0 0 300 160" role="img" aria-label="Concentric circular field lines around a wire"><g fill="none" stroke="#42baff" stroke-width="2"><ellipse cx="150" cy="80" rx="105" ry="48"/><ellipse cx="150" cy="80" rx="77" ry="35"/><ellipse cx="150" cy="80" rx="49" ry="22"/></g><path d="M150 133V26" stroke="#f6fbff" stroke-width="4"/><path d="M143 37l7 -13 7 13" fill="none" stroke="#f6fbff" stroke-width="3"/><text x="164" y="35" fill="#fff" font-size="13">I</text><path d="M228 58l10 4 -8 7" fill="none" stroke="#66d5ff" stroke-width="2"/></svg></div>
+  </section>
+  <section class="card">
+    <span class="pill">Concept 03</span><h3>Circular current loop</h3>
+    <p>Each part of the loop produces a magnetic field. Near the centre, the contributions reinforce one another and the field lines are more nearly straight.</p>
+    <ul><li>Increasing current increases the field.</li><li>Increasing the number of turns increases the field.</li><li>Field direction depends on current direction.</li></ul>
+  </section>
+  <section class="card">
+    <span class="pill">Concept 04</span><h3>Solenoid and electromagnet</h3>
+    <p>A solenoid is a coil of many circular turns. When current flows, it produces a magnetic field similar to a bar magnet.</p>
+    <ul><li>The field inside a long solenoid is nearly uniform.</li><li>A soft-iron core can make the electromagnet stronger.</li><li>Electromagnets can be switched on and off by controlling current.</li></ul>
+  </section>
+  <section class="card">
+    <span class="pill">Concept 05</span><h3>Force and electric motor</h3>
+    <p>A current-carrying conductor placed in a magnetic field can experience a force. The direction depends on current and magnetic field directions.</p>
+    <p><b>Fleming's left-hand rule:</b> forefinger shows field, middle finger shows conventional current, and thumb shows force/motion. Keep the three mutually perpendicular.</p>
+    <p>An electric motor converts electrical energy into mechanical energy.</p>
+  </section>
+  <section class="card">
+    <span class="pill">Concept 06</span><h3>Electromagnetic induction</h3>
+    <p>A changing magnetic field through a coil can induce current in the coil.</p>
+    <ul><li>Relative motion between a magnet and coil can change magnetic flux.</li><li>The induced current direction depends on how the magnetic field changes.</li><li>An electric generator uses electromagnetic induction to convert mechanical energy into electrical energy.</li></ul>
+  </section>
+</div>
+
+<div class="section-head" id="questions"><h2>Important board-style questions</h2><p>Write answers in your notebook before revealing hints</p></div>
+<div class="grid">
+  <section class="card"><h3>✍️ Short answers</h3>
+    <details><summary>1. State the right-hand thumb rule.</summary><p>Imagine holding a straight conductor in your right hand with the thumb pointing in the direction of conventional current. The curled fingers indicate the direction of magnetic field lines.</p></details>
+    <details><summary>2. Why do magnetic field lines never intersect?</summary><p>If they intersected, the field would have two directions at the same point, which is impossible.</p></details>
+    <details><summary>3. What is a solenoid?</summary><p>A long cylindrical coil made of many closely wound turns of insulated conducting wire.</p></details>
+  </section>
+  <section class="card"><h3>📝 Explain / draw</h3>
+    <details><summary>4. Draw the field around a straight wire.</summary><p>Draw the conductor and concentric circular field lines around it. Add arrows to show the field direction and label the current direction.</p></details>
+    <details><summary>5. Explain the working principle of an electric motor.</summary><p>A current-carrying coil in a magnetic field experiences forces on opposite sides in opposite directions, producing a turning effect. A split-ring commutator reverses coil current every half turn to maintain rotation.</p></details>
+    <details><summary>6. What is electromagnetic induction?</summary><p>It is the production of induced current or emf when the magnetic field linked with a conductor or coil changes.</p></details>
+  </section>
+  <section class="card"><h3>🔎 Check your diagrams</h3>
+    <ul><li>Use a sharp pencil and ruler where needed.</li><li>Label the current and field directions.</li><li>Use arrowheads on field lines.</li><li>Keep the diagram large and uncluttered.</li><li>Practise the motor diagram if it is included in your class syllabus.</li></ul>
+  </section>
+</div>
+
+<div class="section-head" id="quiz"><h2>Quick quiz</h2><p>Six questions • instant feedback • score at the end</p></div>
+<section class="card" id="quizCard">
+  <div style="display:flex;justify-content:space-between;gap:12px;align-items:center;flex-wrap:wrap"><span class="pill" id="qCount">Question 1 of 6</span><b id="scoreLabel">Score: 0</b></div>
+  <div class="progress" style="margin:13px 0 20px"><span id="quizProgress"></span></div>
+  <div class="quiz-question" id="question">Loading question…</div>
+  <div class="answers" id="answers"></div>
+  <p class="feedback" id="feedback" aria-live="polite"></p>
+  <button class="btn" id="nextQuestion" disabled>Next question →</button>
+  <button class="btn secondary hide" id="restartQuiz">Try again ↻</button>
+</section>
+
+<div class="section-head" id="checklist"><h2>Study checklist</h2><p>Your browser remembers checked tasks on this device</p></div>
+<section class="card">
+  <div class="checklist" id="tasks">
+    <label><input type="checkbox" data-task="read"> Read the chapter notes</label>
+    <label><input type="checkbox" data-task="wire"> Practise the straight-conductor field diagram</label>
+    <label><input type="checkbox" data-task="solenoid"> Draw and label the solenoid field pattern</label>
+    <label><input type="checkbox" data-task="rules"> Revise right-hand thumb rule and Fleming's left-hand rule</label>
+    <label><input type="checkbox" data-task="questions"> Write answers to the board-style questions</label>
+    <label><input type="checkbox" data-task="quiz"> Complete the quiz and review mistakes</label>
+  </div>
+  <div class="progress" style="margin-top:18px"><span id="taskProgress"></span></div>
+  <p class="small" id="taskStatus">0 of 6 tasks complete</p>
+  <div class="quote">⭐ Small steps every day lead to big results. Keep going, Rudra!</div>
+</section>
+</main>
+<footer class="footer"><div class="wrap">⚛ Rudra's Study Hub · Class 10 Science · Learn it, draw it, explain it.</div><p class="small">Study aid for revision. Check your current CBSE/NCERT syllabus and teacher's instructions for exact exam coverage.</p></footer>
+<script>
+/* Canvas setup */
+function setupCanvas(canvas){
+ const ctx=canvas.getContext('2d'); let w=0,h=0,dpr=1;
+ function resize(){const r=canvas.getBoundingClientRect();dpr=Math.min(window.devicePixelRatio||1,2);w=Math.max(1,r.width);h=Math.max(1,r.height);canvas.width=w*dpr;canvas.height=h*dpr;ctx.setTransform(dpr,0,0,dpr,0,0)}
+ resize();window.addEventListener('resize',resize);
+ return {ctx,get w(){return w},get h(){return h},resize};
+}
+const hero=setupCanvas(document.getElementById('heroCanvas'));
+const wire=setupCanvas(document.getElementById('wireCanvas'));
+const sol=setupCanvas(document.getElementById('solenoidCanvas'));
+let time=0, reverse=false, solPaused=false;
+const range=document.getElementById('current'), solRange=document.getElementById('solCurrent');
+range.addEventListener('input',()=>document.getElementById('currentValue').textContent=range.value+' A');
+solRange.addEventListener('input',()=>document.getElementById('solCurrentValue').textContent=solRange.value+' A');
+document.getElementById('reverse').addEventListener('click',()=>{reverse=!reverse;document.getElementById('reverse').textContent=reverse?'Current reversed ↻':'Reverse current ↻'});
+document.getElementById('pauseSol').addEventListener('click',e=>{solPaused=!solPaused;e.currentTarget.textContent=solPaused?'Resume animation':'Pause animation'});
+function line(ctx,pts,color,width=2){ctx.beginPath();pts.forEach((p,i)=>i?ctx.lineTo(p[0],p[1]):ctx.moveTo(p[0],p[1]));ctx.strokeStyle=color;ctx.lineWidth=width;ctx.stroke()}
+function arrow(ctx,x,y,angle,color,size=6){ctx.save();ctx.translate(x,y);ctx.rotate(angle);ctx.beginPath();ctx.moveTo(size,0);ctx.lineTo(-size,-size*.65);ctx.lineTo(-size,size*.65);ctx.closePath();ctx.fillStyle=color;ctx.fill();ctx.restore()}
+function drawWire(scene,mode,t){
+ const {ctx,w,h}=scene;ctx.clearRect(0,0,w,h);
+ const cx=w*.5, cy=h*.53, current=mode==='hero'?3:+range.value, dir=reverse?-1:1;
+ // soft glow background
+ const grad=ctx.createRadialGradient(cx,cy,5,cx,cy,Math.max(w,h)*.55);grad.addColorStop(0,'#103b76');grad.addColorStop(1,'#06152d');ctx.fillStyle=grad;ctx.fillRect(0,0,w,h);
+ // Perspective rings: 3D-style perspective, educational schematic
+ for(let i=1;i<=5;i++){
+   const rx=Math.min(w*.36,120)*i/3.6, ry=rx*.39;
+   ctx.beginPath();ctx.ellipse(cx,cy,rx,ry,-.08,0,Math.PI*2);
+   ctx.strokeStyle=`rgba(54,174,255,${.23+current*.045})`;ctx.lineWidth=1+current*.28;ctx.stroke();
+   const a=(t*.7*dir+i*.92)%(Math.PI*2);
+   const x=cx+rx*Math.cos(a), y=cy+ry*Math.sin(a);
+   arrow(ctx,x,y,Math.atan2(ry*Math.cos(a),-rx*Math.sin(a))*dir,'#77dcff',5+current*.3);
+ }
+ // wire with glow
+ ctx.save();ctx.shadowBlur=22;ctx.shadowColor='#159cff';line(ctx,[[cx,cy+Math.min(h*.36,94)],[cx,cy-Math.min(h*.39,100)]],'#188dff',9);ctx.restore();
+ line(ctx,[[cx,cy+Math.min(h*.36,94)],[cx,cy-Math.min(h*.39,100)]],'#bcecff',2.5);
+ arrow(ctx,cx,cy-Math.min(h*.39,100)-2,-Math.PI/2,'#eafaff',8);
+ ctx.fillStyle='#d7f4ff';ctx.font='bold 15px system-ui';ctx.fillText(dir===1?'I ↑':'I ↓',cx+12,cy-Math.min(h*.39,100)+9);
+ if(mode!=='hero'){ctx.fillStyle='#9fc8f0';ctx.font='12px system-ui';ctx.fillText('Current direction',12,22)}
+}
+function drawSolenoid(scene,t){
+ const {ctx,w,h}=scene;ctx.clearRect(0,0,w,h);
+ const grad=ctx.createLinearGradient(0,0,w,h);grad.addColorStop(0,'#081b37');grad.addColorStop(1,'#061329');ctx.fillStyle=grad;ctx.fillRect(0,0,w,h);
+ const cx=w/2,cy=h*.53, scale=+solRange.value/3, left=w*.19,right=w*.81,top=cy-39,bottom=cy+39;
+ // outside field loops
+ ctx.strokeStyle=`rgba(66,183,255,${.45+scale*.06})`;ctx.lineWidth=1.6;
+ for(let i=0;i<3;i++){ctx.beginPath();ctx.ellipse(cx,cy,w*(.2+i*.075),h*(.18+i*.11),0,Math.PI,Math.PI*2);ctx.stroke();ctx.beginPath();ctx.ellipse(cx,cy,w*(.2+i*.075),h*(.18+i*.11),0,0,Math.PI);ctx.stroke()}
+ // solenoid turns
+ const turns=13;
+ for(let i=0;i<turns;i++){const x=left+(right-left)*i/(turns-1);ctx.beginPath();ctx.ellipse(x,cy,8,39,0,0,Math.PI*2);ctx.strokeStyle=i%2?'#40b8ff':'#a1e6ff';ctx.lineWidth=2.3;ctx.stroke()}
+ // uniform interior field lines and moving arrows
+ for(let j=-2;j<=2;j++){const y=cy+j*13;line(ctx,[[left+8,y],[right-8,y]],`rgba(79,199,255,${.48+scale*.09})`,1.3);const x=left+((t*34+j*43)%(right-left-20)+right-left-20)%(right-left-20)+10;arrow(ctx,x,y,0,'#a5eeff',5)}
+ ctx.fillStyle='#d6f1ff';ctx.font='bold 12px system-ui';ctx.fillText('N',right+10,cy-3);ctx.fillText('S',left-23,cy-3);
+ ctx.fillStyle='#9fc8f0';ctx.font='12px system-ui';ctx.fillText('Conceptual field pattern',12,20);
+}
+function animate(){time+=.016;drawWire(hero,'hero',time);drawWire(wire,'wire',time);if(!solPaused)drawSolenoid(sol,time);requestAnimationFrame(animate)}
+animate();
+/* Quiz */
+const quiz=[
+ {q:'What produces a magnetic field around a straight conducting wire?',a:['Electric current through the wire','Only a plastic coating','The wire being perfectly straight','The absence of charge flow'],c:0,e:'An electric current produces a magnetic field around the conductor.'},
+ {q:'In the right-hand thumb rule, the thumb points in the direction of…',a:['Magnetic field','Conventional current','Force only','Electron mass'],c:1,e:'The thumb shows conventional current; curled fingers show the magnetic field direction.'},
+ {q:'Why can two magnetic field lines never cross?',a:['They are always straight','A field has one direction at a given point','Magnets repel paper','Field lines have no direction'],c:1,e:'At a point, the magnetic field has a unique direction. Crossing lines would imply two directions.'},
+ {q:'A long current-carrying solenoid has a field inside that is approximately…',a:['Random everywhere','Nearly uniform','Always zero','Only outside the coil'],c:1,e:'Inside a long solenoid, field lines are nearly parallel and evenly spaced, showing an approximately uniform field.'},
+ {q:'Which rule gives the direction of force on a current-carrying conductor in a magnetic field?',a:['Right-hand thumb rule','Fleming’s left-hand rule','Law of reflection','Ohm’s law'],c:1,e:'Fleming’s left-hand rule relates magnetic field, current, and force/motion.'},
+ {q:'An electric generator works on the principle of…',a:['Electromagnetic induction','Evaporation','Static friction','Sound reflection'],c:0,e:'A generator uses electromagnetic induction to convert mechanical energy into electrical energy.'}
+];
+let qi=0,score=0,answered=false;
+const qEl=document.getElementById('question'),aEl=document.getElementById('answers'),fEl=document.getElementById('feedback'),next=document.getElementById('nextQuestion'),restart=document.getElementById('restartQuiz');
+function renderQuestion(){answered=false;const q=quiz[qi];document.getElementById('qCount').textContent=`Question ${qi+1} of ${quiz.length}`;document.getElementById('scoreLabel').textContent=`Score: ${score}`;document.getElementById('quizProgress').style.width=`${qi/quiz.length*100}%`;qEl.textContent=q.q;aEl.innerHTML='';fEl.textContent='';next.disabled=true;next.classList.remove('hide');restart.classList.add('hide');q.a.forEach((text,i)=>{const b=document.createElement('button');b.className='answer';b.textContent=String.fromCharCode(65+i)+'. '+text;b.addEventListener('click',()=>choose(i,b));aEl.appendChild(b)})}
+function choose(i,button){if(answered)return;answered=true;const q=quiz[qi];[...aEl.children].forEach((b,j)=>{b.disabled=true;if(j===q.c)b.classList.add('correct')});if(i===q.c){score++;fEl.textContent='Correct! '+q.e;fEl.style.color='var(--good)'}else{button.classList.add('wrong');fEl.textContent='Not quite. '+q.e;fEl.style.color='var(--bad)'}document.getElementById('scoreLabel').textContent=`Score: ${score}`;document.getElementById('quizProgress').style.width=`${(qi+1)/quiz.length*100}%`;next.disabled=false;next.textContent=qi===quiz.length-1?'See results →':'Next question →'}
+next.addEventListener('click',()=>{if(!answered)return;if(qi<quiz.length-1){qi++;renderQuestion()}else{qEl.textContent=`Quiz complete! You scored ${score} out of ${quiz.length}.`;aEl.innerHTML='';fEl.textContent=score>=5?'Excellent work! Review the notes once more to lock in the concepts.':'Good effort! Read the explanations above, revise the notes, and try again.';next.classList.add('hide');restart.classList.remove('hide');document.getElementById('quizProgress').style.width='100%';const quizTask=document.querySelector('[data-task="quiz"]');quizTask.checked=true;saveTasks()}})
+restart.addEventListener('click',()=>{qi=0;score=0;renderQuestion()});renderQuestion();
+/* Persistent study checklist, local to this browser */
+const taskBoxes=[...document.querySelectorAll('[data-task]')];
+function saveTasks(){const state={};taskBoxes.forEach(b=>state[b.dataset.task]=b.checked);try{localStorage.setItem('rudra-study-tasks',JSON.stringify(state))}catch(e){}updateTasks()}
+function updateTasks(){const n=taskBoxes.filter(b=>b.checked).length;document.getElementById('taskProgress').style.width=(n/taskBoxes.length*100)+'%';document.getElementById('taskStatus').textContent=`${n} of ${taskBoxes.length} tasks complete`}
+try{const saved=JSON.parse(localStorage.getItem('rudra-study-tasks')||'{}');taskBoxes.forEach(b=>b.checked=!!saved[b.dataset.task])}catch(e){}
+taskBoxes.forEach(b=>b.addEventListener('change',saveTasks));updateTasks();
+</script>
+</body>
+</html>
